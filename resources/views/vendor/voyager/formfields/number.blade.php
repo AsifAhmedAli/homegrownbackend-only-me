@@ -1,0 +1,12 @@
+
+<input type="number"
+       class="form-control"
+       name="{{ $row->field }}"
+       @if($row->required == 1) required @endif
+       @if(isset($options->min)) min="{{ $options->min }}" @endif
+       @if(isset($options->max)) max="{{ $options->max }}" @endif
+       @if(isset($options->maxlength)) maxlength="{{ $options->maxlength }}" @endif
+       @if(isset($options->size)) size="{{ $options->size }}" @endif
+       step="{{ $options->step ?? 'any' }}"
+       placeholder="{{ old($row->field, $options->placeholder ?? $row->getTranslatedAttribute('display_name')) }}"
+       value="{{ old($row->field, $dataTypeContent->{$row->field} ?? $options->default ?? '') }}">

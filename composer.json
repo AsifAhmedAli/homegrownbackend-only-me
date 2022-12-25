@@ -1,0 +1,91 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2.5",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "algolia/algoliasearch-client-php": "2.2",
+        "avalara/avataxclient": "^20.7",
+        "braintree/braintree_php": "4.7.0",
+        "fideloper/proxy": "^4.2",
+        "fruitcake/laravel-cors": "^1.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "jackiedo/dotenv-editor": "1.*",
+        "laravel/cashier": "^12.0",
+        "laravel/framework": "^7.0",
+        "laravel/helpers": "^1.3",
+        "laravel/scout": "^8.2",
+        "laravel/tinker": "^2.0",
+        "league/oauth2-client": "^2.5",
+        "nblakefriend/mailchimp-apiv3": "^1.0",
+        "spatie/laravel-newsletter": "^4.7",
+        "tcg/voyager": "^1.4",
+        "tymon/jwt-auth": "^1.0",
+        "unisharp/laravel-filemanager": "^2.1",
+        "wisembly/elephant.io": "^3.3"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.3",
+        "barryvdh/laravel-ide-helper": "^2.7",
+        "facade/ignition": "^2.0",
+        "fzaninotto/faker": "^1.9.1",
+        "mockery/mockery": "^1.3.1",
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Utils/Helpers/ApiHelper.php",
+            "app/Utils/Helpers/VoyagerHelper.php"
+        ],
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "repositories": {
+        "hooks": {
+            "type": "composer",
+            "url": "https://larapack.io"
+        }
+    }
+}

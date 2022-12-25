@@ -1,0 +1,214 @@
+.cusMarginInput {
+    margin-bottom: 15px;
+}
+.margin15PixelRight {
+    margin-right: 5px;
+}
+.customTbl table.dataTable tbody td,
+.customTbl table.dataTable tbody th{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.app-container .content-container .side-menu {
+    z-index: 9999991;
+}
+.icheck{
+    position: relative;
+    top: 2px;
+    left: 6px;
+}
+.d-none {
+    display: none;
+}
+.text-danger
+{
+color: red;
+}
+table#dataTable tr th {
+    vertical-align: top;
+}
+table tr td .btn.delete,
+table tr td .btn.edit,
+table tr td .btn.view,
+table tr td .btn.mr-2,
+table tr td .btn.browse_bread,
+table tr td .btn.edit + .btn.btn-sm.btn-success {
+    margin-top: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.display-flex-p,
+.display-flex-c {
+    display: flex;
+}
+.display-flex-p .btn.view,
+.display-flex-c .btn.view {
+    order: 1;
+}
+.display-flex-p .btn.edit,
+.display-flex-c .btn.edit {
+    order: 2;
+}
+.display-flex-p .btn.delete,
+.display-flex-c .btn.delete{
+    order: 3;
+}
+.display-flex-c .btn.view + .btn.btn-sm {
+    margin-top: 0;
+    margin-left: 5px;
+    order: 4;
+}
+#dataTable #bread-actions a {
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+/* Gallery Image Section Starts */
+.flex-wrap {
+    float: left;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.flex-item {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    padding: 0 15px;
+    margin-bottom: 25px;
+}
+/* Gallery Image Section Ends */
+
+/* Order Details Section Starts */
+.fullWidth {
+    float: left;
+    width: 100%;
+    height: auto;
+    clear: both;
+    padding: 10px 0;
+}
+.od-inner {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+}
+.fullRow {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+.obdr-Btm {
+    border-bottom: 2px solid #eeeeee;
+}
+.bdr-1x-bottom {
+    border-bottom: 1px solid #eeeeee;
+}
+.od-heading h1{
+    font-family: Open Sans,sans-serif;
+    color: #555555;
+    font-size: 18px;
+    font-weight: 700;
+}
+.anyList .row + .row,
+.summaryTop .row,
+.summaryBtm .row {
+    margin-bottom: 3px;
+}
+.any-hdr h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 0;
+}
+.any-lbl {
+    font-weight: 700;
+}
+.any-hdr{
+    margin-bottom: 9px!important;
+}
+.any-lbl, .any-dtl,
+.sumlbl, .sumdtl{
+    margin-bottom: 0px!important;
+}
+.any-lbl a,
+.any-dtl a{
+    text-decoration: underline;
+    color: #76838f;
+}
+.any-lbl a:hover,
+.any-dtl a:hover{
+    text-decoration: none;
+}
+.clearFix {
+    display: block;
+    clear: both;
+}
+.summaryTop, .summaryBtm{
+    padding-bottom: 15px;
+}
+.summaryTop {
+    margin-bottom: 17px;
+}
+.sumlbl, .sumdtl {
+    font-size: 16px;
+    font-weight: 400;
+}
+.sumlbl {
+    font-weight: 700;
+}
+.summaryBtm .sumlbl,
+.summaryBtm .sumdtl{
+    font-size: 18px;
+}
+.od-tbl-hdr h2{
+    margin: 0;
+    font-size: 19px;
+}
+.od-tbl-btm strong{
+    font-weight: 700;
+}
+.mainRow > .col-md-12{
+    margin-bottom: 0;
+}
+.mainRow .inn-bdr-rp{
+    padding: 25px 0 10px 0;
+}
+.img-pro-box {
+    float: left;
+    width: 74px;
+    height: auto;
+}
+.img-pro-box img {
+    float: left;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+}
+.pro-right-content {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 20px;
+}
+.pro-right-content strong {
+    font-size: 15px;
+}
+.clearMar {
+    margin-bottom: 0!important;
+}
+.statusLbl {
+    font-size: 14px!important;
+}
+.mainRow + .mainRow .inn-bdr-rp {
+    border-top: 1px solid #eeeeee;
+}
+.od-tbl-btm {
+    padding-top: 10px;
+}
+.attr-error .text-danger {
+    display: block;
+}
+/* Order Details Section Ends */
