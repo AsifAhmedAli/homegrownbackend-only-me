@@ -14,6 +14,11 @@ use App\Http\Controllers\DashboardController;
 Route::get('testing', function () {
     Artisan::call('tickets:close');
 });
+// Route::get('/storage-link', function () {
+    // $target_folder = storage_path('app/public');  
+    // $link_folder = env('APP_URL').'storage';
+    // symlink($target_folder, $link_folder);
+// });
 
 /*
 |--------------------------------------------------------------------------

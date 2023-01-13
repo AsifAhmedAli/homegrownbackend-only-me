@@ -135,7 +135,6 @@ class AuthController extends Controller
                 'email' => $user->email,
                 'token' => $token
             ]);
-
             Mail::to($request->email)
                 ->send(new VerifyAccount($user, $token, $user->provider));
 

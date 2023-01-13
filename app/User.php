@@ -167,6 +167,8 @@ class User extends \TCG\Voyager\Models\User
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+        // echo $request->email;
+        // echo "<script>console.log('".$request->email."')</script>";
         return $user->save();
     }
 
