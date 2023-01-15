@@ -5,6 +5,8 @@ use App\Http\Controllers\Api\GrowLogDetailController;
 use App\Http\Controllers\Api\KitController;
 use App\Http\Controllers\Api\SettingsController;
 use App\Http\Controllers\Api\TicketController;
+use App\Http\Controllers\Api\GiveawayController;
+use App\Http\Controllers\Api\FeaturedCategories;
 use Illuminate\Http\Request;
 
 /*
@@ -17,7 +19,8 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
  */
-
+Route::get('featuredcategoriesapi',[FeaturedCategories::class, 'featuredCategory']);
+Route::post('giveawayAPI',[GiveawayController::class, 'save1']);
 Route::get('test', function() {
 
     $text = 'text';

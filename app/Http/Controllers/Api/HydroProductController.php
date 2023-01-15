@@ -66,7 +66,7 @@ class HydroProductController extends Controller
     public function optimized()
     {
         $products = HydroProduct::select('logo', 'featured_image',
-             'recid', 'sku'
+             'recid', 'sku', 'hydro_products.id'
         )
         /*->leftJoin('hydro_product_prices', 'hydro_products.recid', '=', 'hydro_product_prices.product_recid')*/;
 
