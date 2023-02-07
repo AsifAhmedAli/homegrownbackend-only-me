@@ -23,8 +23,8 @@ return [
   'sandbox_secret_id'   => env('PAYPAL_SANDBOX_SECRET_ID', 'ELWZqn4EohOnc_o0Tg_SpqnhBoVdMbHVmxcX_9QL-u-01dTIUrkrzE1KktYIXVWdy1d5S3xHvBXf-D_Y'),
   'sandbox_api_baseURL' => env('PAYPAL_SANDBOX_API_BASEURL', 'https://api.sandbox.paypal.com/v1/'),
 
-  'production_client_id'   => env('PAYPAL_PRODUCTION_CLIENT_ID', 'AdwBsb--P-qo-PTDutq7FsdmD_Z0GK5-hNil4I4WEX3tu8bGIHuPmfG3oJKVLGtHfudq9k2jI_MwxgY6'),
-  'production_secret_id'   => env('PAYPAL_PRODUCTION_SECRET_ID', 'EA7vlj01vGcOk1j6WpYZNi4Wjdg53eOWHvf0Wp2dIkI_oW8-fYsOXZVK9HcHxCfbtD_O14O8pfiefBKA'),
+  'production_client_id'   => env('PAYPAL_PRODUCTION_CLIENT_ID', 'AQlt77hDNySrMENg83BxrkZ-XHEcop__EY4wnItkkJa8W6kV8YLcj2dEIeuVZI1dobYL-uvptAd70jrU'),
+  'production_secret_id'   => env('PAYPAL_PRODUCTION_SECRET_ID', 'EGA1GrwDGcoCMgaFvgcYfYd4J_lhyZEKjx8rv1G2K3onYJnmjY5gUsV05f7-pZ1HWjESgNHCeOiA7iON'),
   'production_api_baseURL' => env('PAYPAL_PRODUCTION_API_BASEURL', 'https://api.paypal.com/v1/'),
   'grant_type'             => env('PAYPAL_GRANT_TYPE', 'client_credentials'),
   'plan'                   => [

@@ -47,6 +47,17 @@ class KitController extends ApiBaseController
         return ApiResponse::successResponse(__('generic.kit.detail'), $result);
     }
 
+    public function index1() {
+        $result = Kit::with('reviews')->active()->get();
+        if($result){
+            foreach($result as $kit) {
+                $kit->kit_features = explode(',',$kit->features ?? "");
+                unset($kit->features);
+            }
+        }
+        return ApiResponse::successResponse(__('generic.kit.detail'), $result);
+    }
+
 
     /** My Kits
      * @method myKits

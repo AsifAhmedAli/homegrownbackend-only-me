@@ -299,6 +299,7 @@ class CartController extends ApiBaseController
       $cart->billing_address_phone = request('billingPhone');
       $cart->billing_address_email = request('billingEmail');
       $cart->is_different_billing = request('isDifferentBilling', false);
+      // echo $cart -> billing_address_state;
       if($cart->is_different_billing) {
         $cart->shipping_address_first_name = request('shippingFirstName');
         $cart->shipping_address_last_name = request('shippingLastName');
@@ -310,11 +311,861 @@ class CartController extends ApiBaseController
         $cart->shipping_address_zip = request('shippingZip');
         $cart->shipping_address_phone = request('shippingPhone');
         $cart->shipping_address_email = request('shippingEmail');
+        // echo $cart -> shipping_address_state;
       } else {
         Cart::resetShipping($cart);
       }
+      if($cart->is_different_billing){
+        //  echo $cart->shipping_address_state;
+        switch ($cart->shipping_address_state) {
+          case 'AL':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'AK':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'AZ':
+            // $cart->tax = 5.6;
+            $tax1 = 5.6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'AR':
+            // $cart->tax = 6.5;
+            $tax1 = 6.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'CA':
+            // $cart->tax = 7.25;
+            $tax1 = 7.25;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'CO':
+            // $cart->tax = 2.9;
+            $tax1 = 2.9;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'CT':
+            // $cart->tax = 6.35;
+            $tax1 = 6.35;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'DE':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'DC':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'FL':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'GA':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'HI':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
 
+          case 'ID':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'IL':
+            // $cart->tax = 6.25;
+            $tax1 = 6.25;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'IN':
+            // $cart->tax = 7;
+            $tax1 = 7;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'IA':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'KS':
+            // $cart->tax = 6.5;
+            $tax1 = 6.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'KY':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'LA':
+            // $cart->tax = 4.45;
+            $tax1 = 4.45;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'ME':
+            // $cart->tax = 5.5;
+            $tax1 = 5.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MD':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MA':
+            // $cart->tax = 6.25;
+            $tax1 = 6.25;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MI':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MN':
+            // $cart->tax = 6.88;
+            $tax1 = 6.88;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MS':
+            // $cart->tax = 7;
+            $tax1 = 7;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MO':
+            // $cart->tax = 4.23;
+            $tax1 = 4.23;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
 
+          case 'MT':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NE':
+            // $cart->tax = 5.5;
+            $tax1 = 5.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NV':
+            // $cart->tax = 6.85;
+            $tax1 = 6.85;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NH':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NJ':
+            // $cart->tax = 6.63;
+            $tax1 = 6.63;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NM':
+            // $cart->tax = 5.13;
+            $tax1 = 5.13;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NY':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NC':
+            // $cart->tax = 4.75;
+            $tax1 = 4.75;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'ND':
+            // $cart->tax = 5;
+            $tax1 = 5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'OH':
+            // $cart->tax = 5.75;
+            $tax1 = 5.75;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'OK':
+            // $cart->tax = 4.5;
+            $tax1 = 4.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'OR':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'PA':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'RI':
+            // $cart->tax = 7;
+            $tax1 = 7;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'SC':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'SD':
+            // $cart->tax = 4.5;
+            $tax1 = 4.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'TN':
+            // $cart->tax = 7;
+            $tax1 = 7;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'TX':
+            // $cart->tax = 6.25;
+            $tax1 = 6.25;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'UT':
+            // $cart->tax = 5.95;
+            $tax1 = 5.95;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'VT':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'VA':
+            // $cart->tax = 5.3;
+            $tax1 = 5.3;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'WA':
+            // $cart->tax = 6.5;
+            $tax1 = 6.5;
+          break;
+          case 'WV':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'WI':
+            // $cart->tax = 5;
+            $tax1 = 5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'WY':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+        }
+        // echo $tax1;
+        // echo $cart->total_price;
+      }
+      else{
+        // echo $cart->total_price;
+        // echo $cart->billing_address_state;
+        switch ($cart->billing_address_state) {
+          case 'AL':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'AK':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'AZ':
+            // $cart->tax = 5.6;
+            $tax1 = 5.6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'AR':
+            // $cart->tax = 6.5;
+            $tax1 = 6.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'CA':
+            // $cart->tax = 7.25;
+            $tax1 = 7.25;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'CO':
+            // $cart->tax = 2.9;
+            $tax1 = 2.9;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'CT':
+            // $cart->tax = 6.35;
+            $tax1 = 6.35;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'DE':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'DC':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'FL':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'GA':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'HI':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'ID':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'IL':
+            // $cart->tax = 6.25;
+            $tax1 = 6.25;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'IN':
+            // $cart->tax = 7;
+            $tax1 = 7;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'IA':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'KS':
+            // $cart->tax = 6.5;
+            $tax1 = 6.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'KY':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'LA':
+            // $cart->tax = 4.45;
+            $tax1 = 4.45;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'ME':
+            // $cart->tax = 5.5;
+            $tax1 = 5.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MD':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MA':
+            // $cart->tax = 6.25;
+            $tax1 = 6.25;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MI':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MN':
+            // $cart->tax = 6.88;
+            $tax1 = 6.88;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MS':
+            // $cart->tax = 7;
+            $tax1 = 7;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'MO':
+            // $cart->tax = 4.23;
+            $tax1 = 4.23;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'MT':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NE':
+            // $cart->tax = 5.5;
+            $tax1 = 5.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NV':
+            // $cart->tax = 6.85;
+            $tax1 = 6.85;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NH':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NJ':
+            // $cart->tax = 6.63;
+            $tax1 = 6.63;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NM':
+            // $cart->tax = 5.13;
+            $tax1 = 5.13;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NY':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'NC':
+            // $cart->tax = 4.75;
+            $tax1 = 4.75;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'ND':
+            // $cart->tax = 5;
+            $tax1 = 5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'OH':
+            // $cart->tax = 5.75;
+            $tax1 = 5.75;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'OK':
+            // $cart->tax = 4.5;
+            $tax1 = 4.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'OR':
+            // $cart->tax = 0;
+            $tax1 = 0;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'PA':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+
+          case 'RI':
+            // $cart->tax = 7;
+            $tax1 = 7;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'SC':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'SD':
+            // $cart->tax = 4.5;
+            $tax1 = 4.5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'TN':
+            // $cart->tax = 7;
+            $tax1 = 7;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'TX':
+            // $cart->tax = 6.25;
+            $tax1 = 6.25;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'UT':
+            // $cart->tax = 5.95;
+            $tax1 = 5.95;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'VT':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'VA':
+            // $cart->tax = 5.3;
+            $tax1 = 5.3;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'WA':
+            // $cart->tax = 6.5;
+            $tax1 = 6.5;
+          break;
+          case 'WV':
+            // $cart->tax = 6;
+            $tax1 = 6;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'WI':
+            // $cart->tax = 5;
+            $tax1 = 5;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+          case 'WY':
+            // $cart->tax = 4;
+            $tax1 = 4;
+            $temp_price = $cart->total_price;
+            $total_tax = $temp_price * $tax1/100;
+            $cart->tax = $total_tax;
+            $response['tax_value'] = $tax1."%";
+          break;
+        }
+      }
       if ($cart->is_different_billing) {
         $state = $cart->shipping_address_state;
       } else {
@@ -324,8 +1175,11 @@ class CartController extends ApiBaseController
       if (count($restrictions['restrictedProducts']) || count($restrictions['restrictedKits'])) {
         return ApiResponse::failure(['restricted_products' => $restrictions['restrictedProducts'], 'restricted_kits' => $restrictions['restrictedKits']], 424);
       }
+      
+      
       $cart->save();
       $response['cart']    = Cart::findCartById($cart->id);
+
       $response['message'] = Messages::CART_SHIPPING_BILLING_INFO_UPDATED;
       if (Helper::empty($response['cart'])) {
         return ApiResponse::cart(422, Messages::CART_CLEARED);

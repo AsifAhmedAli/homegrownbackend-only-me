@@ -39,6 +39,7 @@ Route::post('password/reset', 'Api\AuthController@reset_password')->name('reset_
 Route::get('password/reset/validate-code/{token}', 'Api\AuthController@validateResetToken');
 Route::post('auth/payment-method/token/get', 'Api\BraintreePaymentController@getToken');
 Route::get('kits/all', [KitController::class, 'index']);
+Route::get('kits/all1', [KitController::class, 'index1']);
 
 Route::middleware('jwt.auth')->namespace('Api')->group(function () {
 
