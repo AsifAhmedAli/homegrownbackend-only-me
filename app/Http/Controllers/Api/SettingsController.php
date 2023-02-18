@@ -56,6 +56,460 @@ class SettingsController extends ApiBaseController
       }
       
       $firstKit = Kit::active()->first();
+      if($cart != NULL){
+        $response1['tax_value'] = 0;
+        if(isset($cart-> shipping_address_state)){
+          switch ($cart-> shipping_address_state) {
+            case 'AL':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'AK':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'AZ':
+              $tax1 = 5.6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'AR':
+              $tax1 = 6.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'CA':
+              $tax1 = 7.25;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'CO':
+              $tax1 = 2.9;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'CT':
+              $tax1 = 6.35;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'DE':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'DC':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'FL':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'GA':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'HI':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'ID':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'IL':
+              $tax1 = 6.25;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'IN':
+              $tax1 = 7;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'IA':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'KS':
+              $tax1 = 6.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'KY':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'LA':
+              $tax1 = 4.45;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'ME':
+              $tax1 = 5.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MD':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MA':
+              $tax1 = 6.25;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MI':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MN':
+              $tax1 = 6.88;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MS':
+              $tax1 = 7;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MO':
+              $tax1 = 4.23;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'MT':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NE':
+              $tax1 = 5.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NV':
+              $tax1 = 6.85;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NH':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NJ':
+              $tax1 = 6.63;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NM':
+              $tax1 = 5.13;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NY':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NC':
+              $tax1 = 4.75;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'ND':
+              $tax1 = 5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'OH':
+              $tax1 = 5.75;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'OK':
+              $tax1 = 4.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'OR':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'PA':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'RI':
+              $tax1 = 7;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'SC':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'SD':
+              $tax1 = 4.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'TN':
+              $tax1 = 7;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'TX':
+              $tax1 = 6.25;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'UT':
+              $tax1 = 5.95;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'VT':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'VA':
+              $tax1 = 5.3;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'WA':
+              // $cart->tax = 6.5;
+              $tax1 = 6.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'WV':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'WI':
+              $tax1 = 5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'WY':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+          }
+        }
+        else{
+          switch ($cart-> billing_address_state) {
+            case 'AL':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'AK':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'AZ':
+              $tax1 = 5.6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'AR':
+              $tax1 = 6.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'CA':
+              $tax1 = 7.25;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'CO':
+              $tax1 = 2.9;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'CT':
+              $tax1 = 6.35;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'DE':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'DC':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'FL':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'GA':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'HI':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'ID':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'IL':
+              $tax1 = 6.25;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'IN':
+              $tax1 = 7;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'IA':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'KS':
+              $tax1 = 6.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'KY':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'LA':
+              $tax1 = 4.45;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'ME':
+              $tax1 = 5.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MD':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MA':
+              $tax1 = 6.25;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MI':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MN':
+              $tax1 = 6.88;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MS':
+              $tax1 = 7;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'MO':
+              $tax1 = 4.23;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'MT':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NE':
+              $tax1 = 5.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NV':
+              $tax1 = 6.85;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NH':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NJ':
+              $tax1 = 6.63;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NM':
+              $tax1 = 5.13;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NY':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'NC':
+              $tax1 = 4.75;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'ND':
+              $tax1 = 5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'OH':
+              $tax1 = 5.75;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'OK':
+              $tax1 = 4.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'OR':
+              $tax1 = 0;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'PA':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+    
+            case 'RI':
+              $tax1 = 7;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'SC':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'SD':
+              $tax1 = 4.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'TN':
+              $tax1 = 7;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'TX':
+              $tax1 = 6.25;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'UT':
+              $tax1 = 5.95;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'VT':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'VA':
+              $tax1 = 5.3;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'WA':
+              // $cart->tax = 6.5;
+              $tax1 = 6.5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'WV':
+              $tax1 = 6;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'WI':
+              $tax1 = 5;
+              $response1['tax_value'] = $tax1."%";
+            break;
+            case 'WY':
+              $tax1 = 4;
+              $response1['tax_value'] = $tax1."%";
+            break;
+          }
+        }
+      }
+      else{
+        $response1['tax_value'] = 0;
+      }
 
       return ApiResponse::success([
         'cart' => $cart,
@@ -67,6 +521,7 @@ class SettingsController extends ApiBaseController
         'media_types' => MediaType::get(),
         'user' => $this->getUser(),
         'firstKit' => $firstKit,
+        'tax_value' => $response1['tax_value']
       ]);
     }
 
